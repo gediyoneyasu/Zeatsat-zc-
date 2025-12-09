@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en" id="htmlLang">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Zetsat Consultation (ZS)</title>
+    <!-- PWA Meta Tags -->
+    <meta name="description"
+        content="Professional engineering consultation services in construction, water projects, mining, roads, and railways">
+    <meta name="theme-color" content="#2c3e50">
+    <link rel="manifest" href="data:application/manifest+json,{}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/mon.css">
+</head>
+
+<body>
+    <!-- Skip to content for accessibility -->
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+
+    <!-- Header - Always visible -->
+    <header class="header" id="header" role="banner">
+        <div class="logo" title="Zetsat Consultation">
+            <div class="logo-image">
+                <img src="image/image.png" alt="ZS Logo" width="30" height="30">
+            </div>
+            <span class="logo-text">Zeatsat <span class="logo-highlight">Consultation</span></span>
+        </div>
+
+        <!-- Desktop Navigation Menu -->
+        <nav class="desktop-menu" id="desktopMenu" role="navigation" aria-label="Main navigation">
+            <ul class="desktop-nav">
+                <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> <span>Home</span></a></li>
+                <li><a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> <span>About</span></a></li>
+                <li><a href="#services" class="nav-link"><i class="fas fa-cogs"></i> <span>Services</span></a></li>
+                <li><a href="#projects" class="nav-link"><i class="fas fa-project-diagram"></i>
+                        <span>Projects</span></a></li>
+                <li><a href="#testimonials" class="nav-link"><i class="fas fa-quote-left"></i>
+                        <span>Testimonials</span></a></li>
+                <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> <span>Contact</span></a></li>
+            </ul>
+        </nav>
+
+        <div class="right-side">
+            <!-- Search Toggle Button -->
+            <button class="btn search-icon" id="searchToggle" aria-label="Open search" aria-expanded="false">
+                <i class="fas fa-search"></i>
+            </button>
+
+            <!-- Language Selector -->
+            <select class="lang-select" id="languageSelect" aria-label="Select language">
+                <option value="en">English</option>
+                <option value="am">አማርኛ</option>
+            </select>
+
+            <!-- Menu Toggle Button (Mobile only) -->
+            <button class="btn menu-icon" id="menuToggle" aria-label="Open menu" aria-expanded="false"
+                aria-controls="mobileMenu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-bar" id="searchBar" role="search" aria-label="Search website">
+        <div class="search-wrapper">
+            <input type="text" class="search-input" id="searchInput" placeholder="Search for projects, services..."
+                aria-label="Search input">
+            <button class="search-btn" id="searchButton" aria-label="Submit search">
+                <i class="fas fa-search"></i> Search
+            </button>
+        </div>
+        <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+
+    <!-- Menu Backdrop -->
+    <div class="menu-backdrop" id="menuBackdrop"></div>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Main navigation">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <div class="logo-image">
+                    <img src="image/image.png" alt="ZS Logo" width="30" height="30">
+                </div>
+                <span class="logo-text">Zeatsat <span class="logo-highlight">Consultation</span></span>
+            </div>
+            <button class="btn close-menu" id="closeMenu" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <ul class="smart-menu">
+            <li><a href="#home" class="menu-link active"><i class="fas fa-home"></i> <span>Home</span></a></li>
+            <li><a href="#about" class="menu-link"><i class="fas fa-info-circle"></i> <span>About</span></a></li>
+            <li><a href="#services" class="menu-link"><i class="fas fa-cogs"></i> <span>Services</span></a></li>
+            <li><a href="#projects" class="menu-link"><i class="fas fa-project-diagram"></i> <span>Projects</span></a>
+            </li>
+            <li><a href="#testimonials" class="menu-link"><i class="fas fa-quote-left"></i>
+                    <span>Testimonials</span></a></li>
+            <li><a href="#contact" class="menu-link"><i class="fas fa-envelope"></i> <span>Contact</span></a></li>
+        </ul>
+
+        <div class="mobile-language">
+            <select class="lang-select" id="mobileLanguageSelect" aria-label="Select language">
+                <option value="en">English</option>
+                <option value="am">አማርኛ</option>
+            </select>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Home Section -->
+        <section class="hero" id="home">
+            <div class="hero-overlay"></div>
+            <div class="content-wrapper">
+                <div class="home-content fade-in">
+                    <div class="home-text">
+                        <h1 data-translate="welcome">Professional Engineering Consultation Services</h1>
+                        <p class="home-description" data-translate="home_desc">
+                            Zetsat Consultation provides expert engineering solutions in construction,
+                            water projects, mining, roads, railways, and other infrastructure projects.
+                        </p>
+                        <ul class="services-list">
+                            <li><i class="fas fa-hard-hat"></i> <span>Construction Consultation</span></li>
+                            <li><i class="fas fa-tint"></i> <span>Water Projects</span></li>
+                            <li><i class="fas fa-mountain"></i> <span>Mining Engineering</span></li>
+                            <li><i class="fas fa-road"></i> <span>Road & Railway Projects</span></li>
+                        </ul>
+                        <div class="home-buttons">
+                            <button class="cta-button primary-btn" onclick="navigateToSection('projects')">
+                                <i class="fas fa-eye"></i> <span>View Our Projects</span>
+                            </button>
+                            <button class="cta-button secondary-btn" onclick="navigateToSection('contact')">
+                                <i class="fas fa-phone-alt"></i> <span>Get Consultation</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="home-image">
+                        <img src="image/arch1.jpg" alt="ZS Consultation Project" class="hero-image">
+                        <div class="floating-badge">
+                            <span>Expert Consultation Since 2010</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section" id="stats">
+            <div class="content-wrapper">
+                <div class="stats-grid">
+                    <div class="feature-card stat-card fade-in">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h3 class="stat-number" data-count="14">14+</h3>
+                        <p class="stat-title">Years Experience</p>
+                    </div>
+                    <div class="feature-card stat-card fade-in">
+                        <div class="stat-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3 class="stat-number" data-count="150">150+</h3>
+                        <p class="stat-title">Projects Completed</p>
+                    </div>
+                    <div class="feature-card stat-card fade-in">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="stat-number" data-count="25">25+</h3>
+                        <p class="stat-title">Expert Consultants</p>
+                    </div>
+                    <div class="feature-card stat-card fade-in">
+                        <div class="stat-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3 class="stat-number" data-count="18">18+</h3>
+                        <p class="stat-title">Awards Won</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services-section" id="services">
+            <div class="content-wrapper">
+                <h2 class="section-title">Our Consultation Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                        <h3>Construction Consultation</h3>
+                        <p>Expert advice on building design, structural analysis, and construction management</p>
+                        <ul class="service-features">
+                            <li>Structural Design Review</li>
+                            <li>Project Feasibility Studies</li>
+                            <li>Construction Supervision</li>
+                            <li>Quality Assurance</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <h3>Water Projects</h3>
+                        <p>Comprehensive water resource management and infrastructure development</p>
+                        <ul class="service-features">
+                            <li>Water Supply Systems</li>
+                            <li>Irrigation Projects</li>
+                            <li>Water Treatment Plants</li>
+                            <li>Hydrological Studies</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <h3>Mining Engineering</h3>
+                        <p>Professional mining consultation from exploration to operation</p>
+                        <ul class="service-features">
+                            <li>Mineral Exploration</li>
+                            <li>Mine Planning</li>
+                            <li>Environmental Impact</li>
+                            <li>Safety Compliance</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-road"></i>
+                        </div>
+                        <h3>Road & Railway</h3>
+                        <p>Transportation infrastructure design and implementation</p>
+                        <ul class="service-features">
+                            <li>Highway Design</li>
+                            <li>Railway Engineering</li>
+                            <li>Bridge Construction</li>
+                            <li>Transport Planning</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="content-wrapper">
+                <div class="about-content fade-in">
+                    <div class="about-text">
+                        <h2 style="text-align: center;">About Zeatsat</h2>
+                        <p class="about-description">
+                            Founded by <strong>Tesfaye Zegeye</strong>, Zetsat Consultation (ZS) has been delivering
+                            exceptional engineering solutions for over 14 years. We specialize in providing
+                            expert consultation for construction, water projects, mining, roads, railways,
+                            and other major infrastructure projects.
+                        </p>
+                        <div class="features">
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Expert Engineering Consultation</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Infrastructure Development</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Project Management</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Quality Assurance</span>
+                            </div>
+                        </div>
+                        <div class="founder-info-mobile">
+                            <h4>Tesfaye Zegeye</h4>
+                            <p>Founder & Lead Consultant</p>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="image/tesfu.png" alt="Tesfaye Zegeye - Founder">
+                        <div class="founder-info">
+                            <h4>Tesfaye Zegeye</h4>
+                            <p>Founder & Lead Consultant</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects-section" id="projects">
+            <div class="content-wrapper">
+                <h2 class="section-title">Our Recent Projects</h2>
+                <div class="projects-grid">
+                    <!-- Project cards will be added by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section" id="testimonials">
+            <div class="content-wrapper">
+                <h2 class="section-title">Client Testimonials</h2>
+                <div class="swiper testimonials-slider">
+                    <div class="swiper-wrapper">
+                        <!-- Testimonial slides will be added by JavaScript -->
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="content-wrapper">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h2>Contact Zetsat Consultation</h2>
+                        <div class="info-item">
+                            <i class="fas fa-user"></i>
+                            <div>
+                                <h3>Founder</h3>
+                                <p>Tesfaye Zegeye</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3>Phone</h3>
+                                <p>+251 99 260 0682</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Address</h3>
+                                <p>Addis Ababa, Saresi Parsi G+2, Shashimeni</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h3>Working Hours</h3>
+                                <p>Mon - Fri: 8:00 AM - 6:00 PM</p>
+                                <p>Sat: 9:00 AM - 2:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <h3>Request Consultation</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <input type="text" id="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="phone" placeholder="Phone Number" required>
+                            </div>
+                            <div class="form-group">
+                                <select id="service" required>
+                                    <option value="">Select Service</option>
+                                    <option value="construction">Construction Consultation</option>
+                                    <option value="water">Water Projects</option>
+                                    <option value="mining">Mining Engineering</option>
+                                    <option value="road">Road & Railway Projects</option>
+                                    <option value="other">Other Projects</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" placeholder="Project Details / Requirements" rows="5"
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Request Consultation</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Live Chat Widget -->
+    <div class="live-chat-widget" id="liveChatWidget">
+        <button class="chat-toggle" id="chatToggle" aria-label="Open live chat">
+            <i class="fas fa-comments"></i>
+            <span class="chat-badge" id="messageBadge">0</span>
+        </button>
+
+        <div class="chat-container" id="chatContainer">
+            <div class="chat-header">
+                <div class="chat-title">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>Quick Consultation</h3>
+                </div>
+                <button class="chat-close" id="chatClose" aria-label="Close chat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="chat-messages" id="chatMessages">
+                <div class="chat-welcome">
+                    <div class="welcome-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <p>Hello! How can we assist with your project today?</p>
+                    <p class="chat-subtitle">Get expert consultation for your engineering needs</p>
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <div class="typing-indicator" id="typingIndicator">
+                    <span>ZS Consultant is typing...</span>
+                </div>
+
+                <div class="chat-input-container">
+                    <input type="text" class="chat-input" id="chatInput" placeholder="Type your message..."
+                        maxlength="500">
+                    <button class="chat-send" id="chatSend" aria-label="Send message">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+
+                <div class="direct-contact">
+                    <p>For immediate assistance:</p>
+                    <a href="tel:+251992600682" class="contact-link">
+                        <i class="fas fa-phone"></i>
+                        <span>+251 99 260 0682</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="content-wrapper">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Zetsat Consultation (ZS)</h3>
+                    <p>Professional engineering consultation services with 14+ years of experience in construction,
+                        water projects, mining, roads, and railways.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="tel:+251992600682" aria-label="Phone"><i class="fas fa-phone"></i></a>
+                        <a href="mailto:info@zetsatconsult.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> About</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="#projects"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Our Services</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-hard-hat"></i> Construction Consultation</li>
+                        <li><i class="fas fa-tint"></i> Water Projects</li>
+                        <li><i class="fas fa-mountain"></i> Mining Engineering</li>
+                        <li><i class="fas fa-road"></i> Road & Railway Projects</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-user"></i> Tesfaye Zegeye</li>
+                        <li><i class="fas fa-phone"></i> +251 99 260 0682</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Addis Ababa, Saresi Parsi G+2</li>
+                        <li><i class="fas fa-envelope"></i> info@zetsatconsult.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2024 Zetsat Consultation (ZS). All rights reserved.</p>
+                <p class="mt-20">Expert Engineering Solutions Since 2010</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="close-lightbox"><i class="fas fa-times"></i></button>
+            <img src="" alt="" class="lightbox-image">
+            <div class="lightbox-info">
+                <h3 class="lightbox-title"></h3>
+                <p class="lightbox-description"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/mond.js"></script>
+</body>
+
+</html>
